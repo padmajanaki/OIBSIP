@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <style>
+        .menu {
+            list-style-type: none;
+            margin: 0;
+            overflow: hidden;
+            align-items: center;
+            justify-content: space-around;
+            display: flex;
+        }
+
+
+
+        .btn:hover {
+            background-color: #4CAF50;
+            color: orangered;
+        }
+
+        li {
+            display: inline;
+        }
+
+        li a {
+            display: inline;
+            color: purple;
+            background-color: #cbcbcb;
+            text-align: center;
+            padding: 15px 45px;
+            text-decoration: none;
+            letter-spacing: 2px;
+            font-size: 20px;
+            border: 2px outset seagreen;
+            border-radius: 15px;
+            position: relative;
+            left: 0;
+
+        }
+
+        li a:hover {
+            background-color: ghostwhite;
+
+        }
+
+        .container {
+            height: 100vh;
+            width: 100%;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)), url('images.jpg');
+            background-position: center;
+            background-size: cover;
+            padding-right: 3%;
+            padding-left: 5%;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .button {
+            text-transform: uppercase;
+            background: linear-gradient(to bottom, #ff7200, #ff7200);
+            border-radius: 30px;
+            border: 1px solid #5e97d1;
+            cursor: pointer;
+            color: #fff;
+            font-family: 'Poppins',
+                sans-serif;
+            font-size: 23px;
+            font-weight: 700;
+            padding: 12px 20px;
+            margin: 10px;
+            text-decoration: none;
+            box-shadow: 1px 4px 12px rgba(94, 28, 68, .15);
+            text-shadow: 0px 1px 0px #528ecc;
+            text-align: center;
+            display: flex;
+            position: relative;
+            bottom: 250px;
+
+        }
+
+        .button:hover {
+            color: blue;
+        }
+
+        .btn {
+            text-transform: uppercase;
+            background: linear-gradient(to bottom, #cbcbcb 2%, #fff 100%);
+            border-radius: 30px;
+            border: 1px solid #cbcbcb;
+            cursor: pointer;
+            color: #5e97d1;
+            font-family: 'Poppins', sans-serif;
+            font-size: 17px;
+            font-weight: 700;
+            padding: 12px 20px;
+            margin: 10px;
+            text-decoration: none;
+            box-shadow: 1px 4px 12px rgba(94, 28, 68, .15);
+            text-shadow: 0px 1px 0px #cbcbcb;
+            position: relative;
+            left: 30x;
+
+        }
+
+        .text {
+            color: white;
+            max-width: 650px;
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font-size: 30px;
+        }
+
+        .logo {
+            font-size: 35px;
+            letter-spacing: 2px;
+            font-weight: 600;
+            color: #4CAF50;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo">
+            DREAM LAND
+        </div>
+        <ul>
+
+            <div class="menu">
+                <li><a href="">Home</a></li>
+                <li><a href="">planning</a></li>
+                <li><a href="">cost</a></li>
+                <li><a href="">routes</a></li>
+                <li><a href="">contact us</a></li>
+                <button class="btn">Log In</button>
+                <button class="btn">Sign Up</button>
+            </div>
+        </ul>
+        <div class="text">
+            <h1><b>Find Your Next Place To Visit</b></h1>
+
+            <span style="color: aqua;">Life is a journey make the best of it</span>
+        </div>
+    </div>
+    <center><button class="button">Book Your Trip</button></center>
+</body>
+
+</html>
