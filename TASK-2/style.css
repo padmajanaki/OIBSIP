@@ -22,20 +22,6 @@ html {
 
 }
 
-#home::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 700px;
-    width: 1300px;
-    z-index: -1;
-    opacity: .8;
-    background: rgb(238, 174, 202);
-    background: radial-gradient(circle, rgba(238, 174, 202, 1) 23%, rgba(148, 187, 233, 1) 100%);
-
-
-}
 
 .heading2 {
     color: whitesmoke;
