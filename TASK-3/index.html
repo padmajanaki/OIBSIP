@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Temperature Converter</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .title {
+            color: #222;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        .temperature-converter {
+            background: bisque;
+            border-radius: 8px;
+            position: relative;
+            right: 130px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 30px 25px 10px;
+            min-width: 300px;
+            width: 90%;
+            height: 50vh;
+        }
+
+        .result {
+            text-align: center;
+             margin: 15 px 0;
+        }
+
+        .result-heading {
+            color: #555;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+
+        .celsius-value {
+            border-bottom: 2px solid #ccc;
+            padding: 10px;
+        }
+
+        label {
+            color: #555;
+            font-size: 0.8rem;
+            margin-bottom: 5px;
+        }
+
+        input,
+        select {
+            background: transparent;
+            border: none;
+            outline: none;
+            border-bottom: 2px solid #ccc;
+            padding: 8px;
+            margin-bottom: 15px;
+        }
+
+        input:focus {
+            border: 1px solid #4c49f3;
+        }
+
+        .degree-type {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .degree-field {
+            display: flex;
+            flex-direction: row;
+            width: 50%;
+        }
+
+        option {
+            background-color: #3c39e7;
+            color: #f6f6f6;
+        }
+
+        body {
+            background-image: url('image.png');
+            color: #222;
+            font-size: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        #convert-btn {
+            text-transform: uppercase;
+            background: linear-gradient(to bottom, #3633f3, #120fb9);
+            border-radius: 30px;
+            border: 1px solid #cbcbcb;
+            cursor: pointer;
+            color: #5e97d1;
+            font-family: 'Poppins', sans-serif;
+            font-size: 17px;
+            font-weight: 700;
+            padding: 12px 20px;
+            margin: 10px;
+            margin-bottom: 45px;
+            box-shadow: 1px 4px 12px rgba(94, 28, 68, .15);
+            text-shadow: 0px 1px 0px #cbcbcb;
+            transition: all 0.3s ease-in;
+            position: absolute;
+            left: 30x;
+
+        }
+
+        #convert-btn:hover {
+            background: linear-gradient(to bottom, black, black);
+        }
+
+        #convert {
+            text-transform: uppercase;
+            background: linear-gradient(to bottom, #3633f3, #120fb9);
+            border-radius: 30px;
+            border: 1px solid #cbcbcb;
+            cursor: pointer;
+            color: #5e97d1;
+            font-family: 'Poppins', sans-serif;
+            font-size: 17px;
+            font-weight: 700;
+            padding: 12px 35px;
+            margin: 200px;
+            margin-bottom: 120px;
+            margin-top: 380px;
+            margin-right: 100px;
+            box-shadow: 1px 4px 12px rgba(94, 28, 68, .15);
+            text-shadow: 0px 1px 0px #cbcbcb;
+            transition: all 0.3s ease-in;
+            position: absolute;
+
+        }
+
+        #convert:hover {
+            background: linear-gradient(to bottom, black, black);
+        }
+
+        input,
+        select {
+            background: transparent;
+            border: none;
+            outline: none;
+            border-bottom: 2px solid #ccc;
+            padding: 8px;
+            margin-bottom: 100px;
+        }
+
+        .result-heading {
+            color: #555;
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        header {
+            font-size: 35px;
+            letter-spacing: 2px;
+            font-weight: 600;
+            position: relative;
+            bottom: 46%;
+            right: 20%;
+        }
+
+        header::first-letter {
+            font-size: 45px;
+            font-weight: 800;
+            color: #000;
+            font-family: fantasy;
+            position: relative;
+            bottom: 46%;
+            right: 20%;
+        }
+
+        #conv {
+            text-transform: uppercase;
+            background: linear-gradient(to bottom, #3633f3, #120fb9);
+            border-radius: 30px;
+            border: 1px solid #cbcbcb;
+            cursor: pointer;
+            color: #5e97d1;
+            font-family: 'Poppins', sans-serif;
+            font-size: 17px;
+            font-weight: 700;
+            padding: 12px 20px;
+            margin: 10px;
+            margin-left: 180px;
+            margin-bottom: 45px;
+            box-shadow: 1px 4px 12px rgba(94, 28, 68, .15);
+            text-shadow: 0px 1px 0px #cbcbcb;
+            transition: all 0.3s ease-in;
+            position: absolute;
+            left: 30x;
+
+        }
+
+        #conv:hover {
+            background: linear-gradient(to bottom, black, black);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <hl style="color: white;font-weight: bolder;font-style: italic;">Temperature-converter</hl>
+    </header>
+    <div class="container">
+        <div class="temperature-converter">
+            <h1 class="title">Temperature Converter</h1>
+            <form id="for"></form>
+            <div class="degree-type">
+                <div class="degree-field">
+                    <form id="for">
+                        <label for="degree" style="color: black;">Degrees</label>
+                        <input type="number" name="degree" id="degree" placeholder="Enter numerical values" />
+                </div>
+                <div class="temp-field">
+                    <label for="temp-type" style="color: #000;"> Input Type</label>
+                    <select name="temperatures" id="temp-type" autocomplete="on">
+                        <option id="fahrenheit" value="fahrenheit">fahrenheit</option>
+                        <option id="kelvin" value="kelvin">kelvin</option>
+                        <option id="celcius" value="celcius">celcius</option>
+
+                    </select>
+                </div>
+            </div>
+            <button id="convert-btn">celsius</button>
+            <button id="conv">fahrenheit</button>
+            <button id="convert" style="margin-left: 100px;">Reset</button>
+            <div class="result">
+                <span class="result-heading" style="margin-bottom: 92px;">Result </span>
+                <h2 class="celsius-value" id="celsi" style="margin-bottom: 92px;"></h2>
+            </div>
+            </form>
+        </div>
+    </div>
+    <script src="script.js">       
+    </script>
+</body>
+
+</html>
